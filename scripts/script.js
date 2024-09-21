@@ -21,6 +21,14 @@ let games = [
         enabled: true,
         id: "unhinged-hangman",
     },
+    {
+        name: "繁衍後代",
+        description: '我的第一個遊戲! 他是一個奇特的猜字遊戲，有時候很卡請見諒。',
+        thumbnail: '../images/reproduce',
+        linkTo: 'https://gamingdimigd.github.io/Reproduce/',
+        enabled: true,
+        id: "reproduce",
+    },
 ]
 const gameList = document.querySelector(".games")
 games.forEach(game => {
