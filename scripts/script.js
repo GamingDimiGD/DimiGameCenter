@@ -34,7 +34,7 @@ games.forEach(game => {
     item.classList.add("game-item")
     item.classList.add(game.id)
     let thumbnail = document.createElement("img")
-    thumbnail.src = `${game.id}.png`
+    thumbnail.src = `images/${game.id}.png`
     thumbnail.alt = game.name
     let title = document.createElement("h2")
     title.innerText = game.name
