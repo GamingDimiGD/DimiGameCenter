@@ -23,7 +23,7 @@ let games = [
     },
     {
         name: "繁衍後代",
-        description: '我的第一個遊戲! 他是一個奇特的猜字遊戲，有時候很卡請見諒。',
+        description: '我在1天內把遊戲做好，這是一個很奇特的小遊戲，可以搞些很不可思議的組合。什麼意思呢? 進去就知道了。',
         thumbnail: '../images/reproduce',
         linkTo: 'https://gamingdimigd.github.io/Reproduce/',
         enabled: true,
