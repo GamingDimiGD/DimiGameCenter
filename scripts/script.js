@@ -24,7 +24,7 @@ let games = [
     {
         name: "繁衍後代",
         description: '我在1天內把遊戲做好，這是一個很奇特的小遊戲，可以搞些很不可思議的組合。什麼意思呢? 進去就知道了。',
-        thumbnail: '../images/reproduce',
+        thumbnail: '../images/reproduce.png',
         linkTo: 'https://gamingdimigd.github.io/Reproduce/',
         enabled: true,
         id: "reproduce",
