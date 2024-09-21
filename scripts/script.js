@@ -16,7 +16,6 @@ let games = [
     {
         name: "Unhinged Hangman",
         description: '我的第一個遊戲! 他是一個奇特的猜字遊戲，有時候很卡請見諒。',
-        thumbnail: '../images/unhinged-hangman.png',
         linkTo: 'https://gamingdimigd.github.io/UnhingedHangman/',
         enabled: true,
         id: "unhinged-hangman",
@@ -24,7 +23,6 @@ let games = [
     {
         name: "繁衍後代",
         description: '我在1天內把遊戲做好，這是一個很奇特的小遊戲，可以搞些很不可思議的組合。什麼意思呢? 進去就知道了。',
-        thumbnail: '../images/reproduce.png',
         linkTo: 'https://gamingdimigd.github.io/Reproduce/',
         enabled: true,
         id: "reproduce",
@@ -36,7 +34,7 @@ games.forEach(game => {
     item.classList.add("game-item")
     item.classList.add(game.id)
     let thumbnail = document.createElement("img")
-    thumbnail.src = game.thumbnail
+    thumbnail.src = `${game.id}.png`
     thumbnail.alt = game.name
     let title = document.createElement("h2")
     title.innerText = game.name
