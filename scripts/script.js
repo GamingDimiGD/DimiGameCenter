@@ -14,7 +14,7 @@ for (const e of mainContentChildren) {
 
 let games = [
     {
-        name: "Unhinged Hangman",
+        name: "Unhinged Hangman (瘋狂猜字)",
         description: '我的第一個遊戲! 他是一個奇特的猜字遊戲，有時候很卡請見諒。',
         linkTo: 'https://gamingdimigd.github.io/UnhingedHangman/',
         enabled: true,
@@ -27,6 +27,13 @@ let games = [
         enabled: true,
         id: "reproduce",
     },
+    {
+        name: 'Unhinged Idle (瘋狂掛機)',
+        description: '這個遊戲是個掛機遊戲，把"閃"的數量達到無限就贏了。',
+        linkTo: 'https://gamingdimigd.github.io/UnhingedIdle/',
+        enabled: true,
+        id: "unhinged-idle",
+    }
 ]
 const gameList = document.querySelector(".games")
 games.forEach(game => {
