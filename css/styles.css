@@ -123,7 +123,7 @@ button:disabled {
     background: var(--dg);
 }
 
-.games {
+.games, .not-games {
     display: flex;
     margin: 20px;
     gap: 25px;
@@ -132,7 +132,7 @@ button:disabled {
     justify-content: center;
 }
 
-.games .game-item {
+.game-item {
     opacity: 0;
     transform: translateY(50px);
     width: 100%;

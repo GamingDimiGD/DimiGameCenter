@@ -35,8 +35,26 @@ let games = [
         id: "unhinged-idle",
     }
 ]
+
+let notGames = [
+    {
+        name: "HWT 抄聯絡簿神器",
+        description: 'HWT = Homework tool，當你不想在黑板上寫字的時候適用。',
+        linkTo: 'https://gamingdimigd.github.io/HWT/',
+        enabled: true,
+        id: "hwt",
+    },
+    {
+        name: "Memorizer 背書神器",
+        description: '最適合學生自主學習使用，裡面還有資料庫供使用者使用。',
+        linkTo: 'https://gamingdimigd.github.io/Memorizer/',
+        enabled: true,
+        id: "memorizer",
+    }
+]
+
 const gameList = document.querySelector(".games")
-games.forEach(game => {
+const pushGame = (game, isNotGame = false) => {
     let item = document.createElement("div")
     item.classList.add("game-item")
     item.classList.add(game.id)
@@ -48,7 +66,7 @@ games.forEach(game => {
     let desc = document.createElement("b")
     desc.innerHTML = game.description
     let play = document.createElement("button")
-    play.innerText = '遊玩!'
+    play.innerText = isNotGame? '使用!':'遊玩!'
     play.onclick = () => {
         location.href = game.linkTo
     }
@@ -57,8 +75,11 @@ games.forEach(game => {
     div.classList.add("container")
     div.append(title, desc, play)
     item.append(thumbnail, div)
-    gameList.appendChild(item)
-})
+    if (isNotGame) document.querySelector(".not-games").appendChild(item)
+    else gameList.appendChild(item)
+}
+games.forEach(g => pushGame(g, false))
+notGames.forEach(g => pushGame(g, true))
 
 const gameListAnim = () => {
     let gameList = document.querySelector('.games')
@@ -69,6 +90,15 @@ const gameListAnim = () => {
         games[gi].style.opacity = 1
         games[gi].style.transform = 'translateY(0px)'
         gi++
+    }, 100)
+    let notGamesList = document.querySelector(".not-games")
+    let notGames = notGamesList.querySelectorAll(".game-item")
+    let ni = 0
+    let idk2 = setInterval(() => {
+        if (ni >= notGames.length) return clearInterval(idk2)
+        notGames[ni].style.opacity = 1
+        notGames[ni].style.transform = 'translateY(0px)'
+        ni++
     }, 100)
     $('.unhinged-hangman img')[0].addEventListener( 'click', () => {
         location.href = 'https://drive.google.com/file/d/1X48Ax0txDmQCIgqnrv_JNECfNak4A7u3/view?usp=sharing'
